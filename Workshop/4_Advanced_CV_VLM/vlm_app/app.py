@@ -56,7 +56,7 @@ def ft_object_detection_predict(image):
     model.eval()
     with torch.no_grad():
         x = eval_transform(image)
-        x = x[:3, ...].to(device)
+        x = x[:3, .. .].to(device)
         predictions = model([x, ])
         pred = predictions[0]
     return pred
